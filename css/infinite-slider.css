@@ -1,3 +1,7 @@
+body {
+    background-color: transparent;
+}
+
 /* Slider */
 .slick-slide {
     margin: 0px 20px;
