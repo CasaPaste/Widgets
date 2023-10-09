@@ -16,7 +16,7 @@ body {
     background-color: transparent !important;
 }
 
-@media screen and (min-width: 40em) {
+/* @media screen and (min-width: 40em) {
     .cards {
         display: flex;
         flex-wrap: wrap;
@@ -38,30 +38,32 @@ body {
     .card {
         flex-basis: calc(33.33% - 1em) !important;
     }
-}
+} */
 
 .cards {
     display: flex !important;
     flex-direction: row !important;
-    flex-wrap: wrap !important;
+    flex-wrap: nowrap !important;
     justify-content: space-around !important;
     width: 100% !important;
     background-color: transparent !important;
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-    scroll-snap-type: y proximity !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory !important;
 }
 
 .card.donut-card {
-    display: flex !important;
+    display: fixed !important;
     flex: 0 1 calc(25% - 1em) !important;
     min-width: 18em !important;
     margin-top: 10px !important;
     margin-bottom: 10px !important;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
     scroll-snap-align: start !important;
     scroll-snap-stop: always !important;
-    scroll-snap-coordinate: 0% 0% !important;
-    scroll-snap-destination: 0% 0% !important;
+    scroll-snap-coordinate: 100% 100% !important;
+    scroll-snap-destination: 50% 50% !important;
 }
 
 .card-body {
