@@ -37,7 +37,6 @@ window.onload = function () {
             let classes = Array.from(part.classList);
             let circleEl = part.querySelector('.circle');
             circleEl.id = `${part.id}-circle`;
-            console.log(circleEl)
 
             let start = 0;
             let end = 0;
@@ -61,7 +60,6 @@ window.onload = function () {
             let startAngle = start;
             let endAngle = end;
 
-            console.log(`${part.id} start: ${startAngle}, end: ${endAngle}`);
 
             part.style.transform = `rotate(${startAngle}deg)`;
 
@@ -76,7 +74,6 @@ window.onload = function () {
             }`;
 
             let styleSheet = document.styleSheets[0];
-            console.log(styleSheet);
 
             styleSheet.insertRule(`#${part.id} { transform: rotate(${endAngle}deg); }`, styleSheet.cssRules.length);
             styleSheet.insertRule(animation, styleSheet.cssRules.length);
