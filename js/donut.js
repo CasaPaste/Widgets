@@ -3,7 +3,25 @@ function get_parts(element) {
     return parts;
 }
 
-document.addEventListener("DOMContentLoaded", function (event) {
+isVisible = function (element) {
+    let rect = element.getBoundingClientRect();
+    let viewHeight = window.innerHeight;
+    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+};
+
+function onVisible(element, callback) {
+    new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.intersectionRatio > 0) {
+                callback(element);
+                observer.disconnect();
+            }
+        });
+    }).observe(element);
+    if (!callback) return new Promise(r => callback = r);
+}
+
+window.onload = function () {
     let charts = document.querySelectorAll('.donut-chart');
     let chart_num = 0;
     charts.forEach(function (chart) {
@@ -62,9 +80,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             styleSheet.insertRule(`#${part.id} { transform: rotate(${endAngle}deg); }`, styleSheet.cssRules.length);
             styleSheet.insertRule(animation, styleSheet.cssRules.length);
-
-            circleEl.style.animation = `${animationName} 1s 1 forwards`;
+            // circleEl.style.animation = `${animationName} 1s 1 forwards`;
             last_end += endAngle;
+            // add event listener to each circle when it comes in to view to add the animation
+            if (isVisible(circleEl)) {
+                circleEl.style.animation = `${animationName} 1s 1 forwards`;
+            } else {
+                onVisible(circleEl, function (element) {
+                    element.style.animation = `${animationName} 1s 1 forwards`;
+                });
+            };
         });
     });
-});
+};
