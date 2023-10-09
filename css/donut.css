@@ -23,6 +23,11 @@ body {
     align-items: center !important;
     align-content: center !important;
     width: 100% !important;
+    background-color: transparent !important;
+}
+
+.row {
+    background-color: transparent !important;
 }
 
 .card {
