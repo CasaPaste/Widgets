@@ -1,0 +1,143 @@
+:root {
+    --color-primary: #ff5763;
+    --color-secondary: #57baff;
+    --color-dark: #222222;
+    --color-light: #dcdcdc;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: transparent;
+}
+
+.container {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    align-content: center !important;
+    width: 100% !important;
+}
+
+.card {
+    min-width: 150px !important;
+    min-height: 100% !important;
+}
+
+.card-body {
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-secondary);
+    width: 100%;
+    height: 100%;
+}
+
+.card-header {
+    background-color: var(--color-secondary) !important;
+    color: var(--color-light);
+    font-family: ubuntu;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: var(--color-dark);
+    font-family: ubuntu;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+.card-footer {
+    background-color: var(--color-secondary) !important;
+    color: var(--color-light) !important;
+    font-family: ubuntu !important;
+    font-size: 1rem !important;
+    text-align: center;
+    margin: 0;
+    padding: 0px !important;
+}
+
+.donut-chart {
+    position: relative;
+    aspect-ratio: 1;
+    background-color: transparent;
+    width: 75%;
+    margin: 0 auto 2rem;
+    border-radius: 100%
+}
+
+p.center {
+    background: var(--color-secondary);
+    position: absolute;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--color-dark);
+    font-family: ubuntu;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 53%;
+    height: 53%;
+    margin: auto;
+    border-radius: 50%;
+    outline: var(--color-secondary) solid 3px;
+    line-height: 35px;
+    padding: 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portion-block {
+    border-radius: 50%;
+    clip-path: polygon(0% 100%, 0% 0%, 100% 100%);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.circle {
+    border-radius: 50%;
+    clip-path: polygon(0% 0%, 50% 50%, 100% 100%, 100% 0%);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    font-family: monospace;
+    font-size: 1.5rem;
+    scale: .75;
+}
+
+.part .portion-block {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    transform-origin: center center;
+    z-index: 1;
+}
+
+.primary .circle {
+    background-color: var(--color-primary);
+}
+
+.secondary .circle {
+    background-color: var(--color-secondary);
+}
+
+.light .circle {
+    background-color: var(--color-light);
+}
+
+.dark .circle {
+    background-color: var(--color-dark);
+}
