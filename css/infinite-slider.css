@@ -88,6 +88,8 @@ body {
 
 .slick-slide img {
     display: block;
+    height: 75px;
+    object-fit: contain;
 }
 
 .slick-slide.slick-loading img {
@@ -96,6 +98,7 @@ body {
 
 .slick-slide.dragging img {
     pointer-events: none;
+
 }
 
 .slick-initialized .slick-slide {
