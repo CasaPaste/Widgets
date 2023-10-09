@@ -59,10 +59,8 @@ body {
     margin-bottom: 10px !important;
     margin-left: 5px !important;
     margin-right: 5px !important;
-    scroll-snap-align: start !important;
+    scroll-snap-align: center !important;
     scroll-snap-stop: always !important;
-    scroll-snap-coordinate: 0% 0% !important;
-    scroll-snap-destination: 0% 0% !important;
 }
 
 .card-body {
