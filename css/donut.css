@@ -49,7 +49,7 @@ body {
     background-color: transparent !important;
     overflow-x: hidden !important;
     overflow-y: auto !important;
-    scroll-snap-type: y mandatory !important;
+    scroll-snap-type: y proximity !important;
 }
 
 .card.donut-card {
@@ -59,6 +59,9 @@ body {
     margin-top: 10px !important;
     margin-bottom: 10px !important;
     scroll-snap-align: start !important;
+    scroll-snap-stop: always !important;
+    scroll-snap-coordinate: 0% 0% !important;
+    scroll-snap-destination: 0% 0% !important;
 }
 
 .card-body {
