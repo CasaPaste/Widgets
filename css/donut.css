@@ -44,12 +44,12 @@ body {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
-    justify-content: space-around !important;
     width: 100% !important;
     background-color: transparent !important;
     overflow-x: auto !important;
     overflow-y: hidden !important;
     scroll-snap-type: x mandatory !important;
+    padding-left: 5px !important;
 }
 
 .card.donut-card {
@@ -62,7 +62,7 @@ body {
     margin-right: 5px !important;
     scroll-snap-align: start !important;
     scroll-snap-stop: always !important;
-    scroll-snap-coordinate: 100% 100% !important;
+    scroll-snap-coordinate: 0% 0% !important;
     scroll-snap-destination: 50% 50% !important;
 }
 
