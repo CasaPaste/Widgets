@@ -3,3 +3,7 @@
 ## Partner Showcase
 
 Code used from https://www.solodev.com/blog/web-design/adding-an-infinite-client-logo-carousel-to-your-website.stml
+
+## Insights
+
+Code used from https://codepen.io/hilar47/pen/RprXev
