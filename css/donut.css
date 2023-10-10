@@ -66,6 +66,7 @@ body {
 .card-body {
     align-items: center;
     justify-content: center;
+    text-justify: newspaper;
     background-color: var(--color-secondary);
     width: 100%;
     height: 100%;
@@ -82,7 +83,7 @@ body {
 }
 
 .card-text {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: var(--color-dark);
     font-family: Ubuntu, sans-serif;
     text-align: center;
@@ -91,10 +92,11 @@ body {
 }
 
 .card-footer {
+    min-height: 45px;
     background-color: var(--color-secondary) !important;
     color: var(--color-light) !important;
     font-family: Ubuntu, sans-serif !important;
-    font-size: 1rem !important;
+    font-size: .75rem !important;
     text-align: center;
     margin: 0;
     padding: 0px !important;
@@ -110,11 +112,12 @@ body {
 }
 
 p.center {
+    flex-direction: column !important;
     background: var(--color-secondary);
     position: absolute;
     text-align: center;
-    font-size: 1.5rem;
-    color: var(--color-dark);
+    font-size: 2rem;
+    color: var(--color-primary);
     font-family: Ubuntu, sans-serif;
     top: 0;
     left: 0;
@@ -130,6 +133,14 @@ p.center {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+span.center {
+    color: var(--color-dark);
+    font-weight: 800;
+    font-size: 1rem;
+    display: block;
+    margin-top: .5px;
 }
 
 .portion-block {
