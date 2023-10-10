@@ -63,6 +63,7 @@ body {
     scroll-snap-align: center !important;
     scroll-snap-stop: always !important;
     border-radius: 25px !important;
+    border: none !important;
 }
 
 .card-body {
